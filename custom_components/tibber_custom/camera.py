@@ -41,6 +41,7 @@ class TibberCam(LocalFile):
         self._last_update = dt_util.now() - datetime.timedelta(hours=1)
         self.realtime_state = None
         # hass.bus.async_listen_once(EVENT_HOMEASSISTANT_START, self._generate_fig)
+        self._attr_unique_id = self._name
 
         super().__init__(self._name, self._path)
 
